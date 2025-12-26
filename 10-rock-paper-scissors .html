@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>Rock Paper Scissors</title>
+<!--      
+  <style>
+    
+  </style> -->
+  <!-- we dont use style element to load css file we use link a void element , where the rel is relation which tells which type of file to load and href is which while to load,we can use multiple link elements as multiple script element to load multiple css files -->
+  <link rel="stylesheet"
+   href="styles/10-rock-paper-scissors.css"
+   >
+  </head>
+  <body>
+    <p class="title">Rock Paper Scissors</p>
+    <button onclick="
+      playGame('rock');
+    " class="move-button">
+    <img src="images/rock-emoji.png" class="move-icon">
+  </button>
+    <!-- <img> is a void element -->
+    <button onclick="
+    
+    playGame('paper');
+    
+    
+    " class="move-button"><img src="images/paper-emoji.png" class="move-icon"></button>
+    <button onclick="
+    
+    playGame('scissors');
+    
+   
+    " class="move-button"><img src="images/scissors-emoji.png" class="move-icon"></button>
+    <p class="js-result result"></p>
+    <p class="js-moves"></p>
+    <p class="js-score score"></p><!--reset score will be now below the 3 buttons as paragraph is known as block element and it takes up the entire line,therefore the next button will be below paragraph element-->
+
+    <button onclick="
+    
+     score.wins=0;
+     score.losses = 0;
+     score.ties = 0;
+
+    localStorage.removeItem('score');
+    updateScoreElement();
+    // resetButton();//my way instead of removeItem
+    "class="reset-score-button">Reset Score</button>
+
+     <script src="scripts/10-rock-paper-scissors.js">  </script>
+     <!-- we can use multiple scripts to load multiple js files on to the page in the top to bottom approach -->
+  </body>
+</html>
